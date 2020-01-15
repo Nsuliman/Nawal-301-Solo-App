@@ -33,6 +33,12 @@ server.get('/pol', (req, res) => {
     res.render('pages/pol');
 });
 
+let url = `https://sv443.net/jokeapi/category/Programming?blacklistFlags=political&format=json`;
+superagent.get(url)
+    .then ( data =>
+        {
+            console.log('data : ', data.body.joke);
+        });
 
 
 /**************************************************** Server Listening  ********************************************/
