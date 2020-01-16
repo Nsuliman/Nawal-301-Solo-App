@@ -14,11 +14,11 @@
     <main>
         <h2> Search Results </h2>
         <% gifts.forEach((gift)=> { %>
-        <div class="bookdetails">
+        <div class="gifdetails">
             <p> ** Gif's Details ** </p><br>
-            <img class="bookimage" src=<%=gift.image %><br>
-            <p class="booktitle">Title : <%-gift.title%></p>
-            <p class="bookauthor">Type : <%-gift.type %></p>
+            <img class="gifimage" src=<%=gift.image %><br>
+            <p class="giftitle">Title : <%-gift.title%></p>
+            <p class="giftype">Type : <%-gift.type %></p>
             <br><br><br><br>
         </div>
         <% }); %>

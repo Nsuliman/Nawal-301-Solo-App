@@ -18,6 +18,8 @@
     width: 350px ;
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
     font-size: x-large;
+    color: white;
+    background-color: rgb(2, 2, 36);
   }
 
   .numOfBooks {

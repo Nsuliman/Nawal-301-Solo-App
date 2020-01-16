@@ -28,11 +28,11 @@ main h2 {
 
   /******** show page **********/
 
-.bookdetails {
+.gifdetails {
     position: relative;
     text-align: center;
-    background-color: rgb(172, 175, 175);
-    border: 3px solid gray;
+    background-color: rgb(212, 148, 209);
+    border: 3px solid white;
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
     margin-top: 10px;
     margin-left: 30px;
@@ -41,7 +41,17 @@ main h2 {
     font-style: oblique;
     font-weight: bold;
     padding: 20px;
+    height: 450px;
   }
+
+.gifimage {
+
+    width: 300px;
+    height: 250px;
+    margin: 5px;
+    padding: 10px;
+    background-color: white;
+}
 
 .bookdescp {
   background-color: rgb(245, 237, 237);
@@ -51,7 +61,7 @@ main h2 {
   overflow: auto;
 }
 
-.booktitle {
+.giftitle {
   color: white;
   text-shadow: 2px 2px black;
   font-size: larger;
