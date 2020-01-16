@@ -33,10 +33,20 @@ server.get('/pol', (req, res) => {
     res.render('pages/pol');
 });
 
-const url = `http://api.giphy.com/v1/stickers/search?q=human&api_key=${process.env.GIFT_API}`;
+// Rendering New Search
+server.get('/new', (req, res) => {
+    res.render('pages/searches/new');
+});
+
+
+const url = `http://api.giphy.com/v1/gifs/search?api_key=${process.env.GIFT_API}&q=human`;
 superagent.get(url)
     .then(data => {
-        console.log('data : ', data.body.data);
+        let path = data.body.data;
+        path.map( element =>
+            {
+                console.log('Element  : ', element.images.downsized_large.url);
+            });
     });
 
 
