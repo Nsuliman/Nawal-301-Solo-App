@@ -18,8 +18,14 @@
             <p> ** Gif's Details ** </p><br>
             <img class="gifimage" src=<%=gift.image %><br>
             <p class="giftitle">Title : <%-gift.title%></p>
-            <p class="giftype">Type : <%-gift.type %></p>
-            <br><br><br><br>
+            
+            <form action ='/add' method="POST" class="formBook">
+                <input type="hidden" name="image" value="<%= gift.image%>">
+                <input type="hidden" name="title" value="<%= gift.title%>">
+                <input type="hidden" name="type" value="<%= gift.type%>">
+                <button class="selectbutton" type="submit"> Select This GIF </button>
+            </form>
+            <br><br>
         </div>
         <% }); %>
     </main>

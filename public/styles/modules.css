@@ -41,7 +41,7 @@ main h2 {
     font-style: oblique;
     font-weight: bold;
     padding: 20px;
-    height: 450px;
+    height: 600px;
   }
 
 .gifimage {
@@ -73,6 +73,7 @@ main h2 {
 
 .selectbutton {
   margin-left: 0px;
+  background-color: rgb(2, 2, 36);
 }
 
 .searchbutton {

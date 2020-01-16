@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+   
+    <title>Add To DataBase</title>
+
+    <%- include('../../templates/head') %> 
+
+    <link href="https://fonts.googleapis.com/css?family=Playfair+Display&display=swap" rel="stylesheet">
+
+</head>
+<body>
+    <header>
+        <%- include('../../templates/header') %> 
+    </header>
+    <form class="addForm" action="/gifts" method="post">
+        <label>
+            <input  type="text" name="title" placeholder="Populated Title:" value="<%= gifts.title%>">
+            <input  type="text" name="image" placeholder="Populated image:" value="<%= gifts.image%>">
+            <input type="text" name="type" placeholder="Populated type:" value="<%= gifts.type%>">
+            <input type="text" name="gifshelf" placeholder="Enter a gifshelf Name:">
+            <div class="submit">
+                <input type="submit" value="Add To Database"></input>
+            </div>
+        </label>
+    </form>
+
+    <footer>
+        <%- include('../../templates/footer') %> 
+    </footer>
+</body>
+</html>
