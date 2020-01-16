@@ -17,11 +17,6 @@ body {
   
     main  {
         background-image: url('../img/background-9120.jpg');
-        height: 480px;
-    }
-  
-    #searchbox {
-        margin: 60px;
     }
   
     form {

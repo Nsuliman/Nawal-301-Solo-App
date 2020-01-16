@@ -2,7 +2,7 @@
 .container {
     display: block;
     position: relative;
-    margin-bottom: 5px;
+    margin: 5px;
     cursor: pointer;
     font-size: 22px;
     -webkit-user-select: none;

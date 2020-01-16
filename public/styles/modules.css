@@ -18,8 +18,7 @@ main h2 {
 
   /* Text box input */
 #searchbox {
-    margin-left: 55px;
-    margin-right: 55px;
+    margin: 10px 50px;
     padding: 20px;
     width: 350px ;
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
