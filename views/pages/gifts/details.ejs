@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Books</title>
+    <link rel="stylesheet" href="../styles/base.css">
+    <link rel="stylesheet" href="../styles/modules.css">
+    <link rel="stylesheet" href="../styles/layout.css">
+    <link href="https://fonts.googleapis.com/css?family=Roboto&display=swap" rel="stylesheet">
+</head>
+
+<body>
+    <header>
+        <%- include('../../templates/header') %>
+    </header>
+    <main>
+        <% gifts.forEach((gift)=> { %>
+        <div class="gifdetails">
+            <p class="detailp"> ** GIF Details ** </p><br>
+            <img class="gifimage" src=<%=gift.image %><br>
+            <p class="giftitle">Title : <%-gift.title%></p>
+            <p class="giftype">Type : <%-gift.type %></p>
+            <p class="gifshelf"> GIF-Shelf : <%= gift.gifshelf%></p>
+            <br>
+        </div>
+        <% }); %>
+    </main>
+
+    <footer>
+        <%- include('../../templates/footer') %>
+    </footer>
+</body>
+
+</html>

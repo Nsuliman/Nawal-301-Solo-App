@@ -57,7 +57,7 @@ server.get('/', (req, res) => {
 
 // Add GIF To DataBase 
 server.post('/add', (req, res) => {
-    console.log('req.body : ', req.body);
+    // console.log('req.body : ', req.body);
     res.render('pages/searches/add', { gifts: req.body });
 });
 
@@ -77,7 +77,6 @@ server.post('/gifts', (req, res) => {
             res.redirect('/')
         })
 });
-
 
 
 // Shows the Results 
@@ -109,6 +108,20 @@ server.post('/searches', (req, res) => {
         .catch(error => {
             // console.log('Errorrrrrrrrrrrr : ', error);
             res.render('pages/error');
+        });
+});
+
+// View Details
+server.get('/gifts/:gifts_id', (req, res) => {
+    let SQL = `SELECT * FROM gifts WHERE id=$1`
+    // // console.log('SQL : ', SQL);
+    let values = [req.params.gifts_id]
+    // console.log('req.params.books_id : ', req.params.books_id);
+
+    client.query(SQL, values)
+        .then(results => {
+            console.log('results.rows : ', results.rows);
+            res.render('pages/gifts/details', { gifts: results.rows })
         });
 });
 
