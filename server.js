@@ -10,7 +10,7 @@ const methodOverride = require('method-override')
 const expressLayouts = require('express-ejs-layouts')
 
 // PORT 
-const PORT = process.env.PORT || 8822 ;
+const PORT = process.env.PORT || 8822;
 
 // Allows 
 const server = express();
@@ -33,14 +33,12 @@ server.get('/pol', (req, res) => {
     res.render('pages/pol');
 });
 
-let url = `https://sv443.net/jokeapi/category/Programming?blacklistFlags=political&format=json`;
+const url = `http://api.giphy.com/v1/stickers/search?q=human&api_key=${process.env.GIFT_API}`;
 superagent.get(url)
-    .then ( data =>
-        {
-            console.log('data : ', data.body.joke);
-        });
+    .then(data => {
+        console.log('data : ', data.body.data);
+    });
 
 
 /**************************************************** Server Listening  ********************************************/
 server.listen(PORT, () => console.log(`Nawal Solo App , listening On port # : ${PORT}`));
-  
