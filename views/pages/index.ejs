@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>DataBase</title>
+
+    <!-- <link rel="stylesheet" href="styles/reset.css"> -->
+    <%- include('../templates/head') %> 
+    <link href="https://fonts.googleapis.com/css?family=Roboto&display=swap" rel="stylesheet">
+
+
+</head>
+<body>
+     <header>
+      <%- include('../templates/header') %> 
+
+  </header>
+
+  <main>
+    <h2> Saved GIF </h2>
+    <p class="numOfBooks"> <%= gifts.length%></p>
+
+
+    <% gifts.forEach((gift)=> { %>
+        <div class="gifdetails">
+        <p> ** GIF Details ** </p><br>
+        <img class="gifimage" src=<%=gift.image %><br>
+        <p class="giftitle">Title : <%-gift.title%></p>
+        <p class="bookauthor">Type : <%-gift.type %></p>
+    
+    <br><br><br><br>
+</div>
+    <% }); %>
+
+  </main>
+
+  <footer>
+    <%- include('../templates/footer') %> 
+  </footer>
+</body>
+</html>

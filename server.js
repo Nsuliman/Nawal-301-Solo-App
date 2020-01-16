@@ -24,7 +24,7 @@ server.use(express.json());
 server.use(express.static('./public'));
 server.use(express.urlencoded({ extended: true }));
 server.set('view engine', 'ejs');
-server.use(methodOverride(middleware));
+// server.use(methodOverride(middleware));
 
 /***************************************************** Routes  ****************************************************/
 
@@ -43,6 +43,18 @@ server.get('/new', (req, res) => {
     res.render('pages/searches/new');
 });
 
+//Restore Data From DataBase 
+server.get('/', (req, res) => {
+    let SQL = `SELECT * FROM gifts `
+    // // console.log('SQL : ', SQL);
+    client.query(SQL)
+        .then(data => {
+            res.render('pages/index', { gifts: data.rows })
+            // res.render('pages/indexshow');
+        })
+});
+
+
 // Add GIF To DataBase 
 server.post('/add', (req, res) => {
     console.log('req.body : ', req.body);
@@ -55,7 +67,7 @@ server.post('/gifts', (req, res) => {
     // console.log('req.body : ', req.body);
     let { image, title,type, gifshelf } = req.body
 
-    let SQL = `INSERT INTO books (image, title, type, gifshelf) VALUES ($1, $2, $3, $4)`
+    let SQL = `INSERT INTO gifts (image, title, type, gifshelf) VALUES ($1, $2, $3, $4)`
     // // console.log('SQL : ', SQL);
     let values = [image, title, type, gifshelf]
     // console.log('values : ', values);
