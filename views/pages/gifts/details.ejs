@@ -24,13 +24,13 @@
             <br>
 
             <div class="update-delete">
-                <form action='/update' method="POST" class="formBook">
+                <form action='/update' method="POST">
                     <input type="hidden" name="id" value="<%= gift.id%>">
                     <input type="hidden" name="image" value="<%= gift.image%>">
                     <input type="hidden" name="title" value="<%= gift.title%>">
                     <input type="hidden" name="type" value="<%= gift.type%>">
                     <input type="hidden" name="gifshelf" value="<%= gift.gifshelf%>">
-                    <button class="updateButton" type="submit"> Update Details</button>
+                    <button class="updateButton" type="submit"> Update GIF info</button>
                 </form>
 
                 <form action="/delete/<%= gift.id%>" method="post">
