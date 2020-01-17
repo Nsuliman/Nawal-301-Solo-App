@@ -24,7 +24,7 @@ server.use(express.json());
 server.use(express.static('./public'));
 server.use(express.urlencoded({ extended: true }));
 server.set('view engine', 'ejs');
-// server.use(methodOverride(middleware));
+server.use(methodOverride(middleware));
 
 /***************************************************** Routes  ****************************************************/
 
@@ -125,6 +125,29 @@ server.get('/gifts/:gifts_id', (req, res) => {
         });
 });
 
+// Update GIF details by clicking and show up the form to be able to update 
+server.post('/update', (req, res) => {
+    // console.log('req.body : ', req.body);
+    res.render('pages/gifts/edit', { gifts: req.body });
+})
+
+// After finished update save the updated details into DB then redirect me to Homepage 
+server.put('/update/:gifts_id', (req, res) => {
+
+    let { image, title, type, gifshelf } = req.body;
+    // // console.log('req.body : ', req.body);
+
+    let SQL = `UPDATE gifts SET image=$1, title=$2, type=$3, gifshelf=$4 WHERE id=$5`
+    // console.log('SQL : ', SQL);
+
+    let values = [image, title, type, gifshelf, req.params.gifts_id];
+    // console.log('values : ', values);
+    
+    client.query(SQL, values)
+        .then(() => {
+            res.redirect('/')
+        })
+});
 
 function Gift(data) {
 
@@ -135,6 +158,16 @@ function Gift(data) {
     this.rating = data.rating;
     this.source = data.source;
 } // End of gift constructor function 
+
+
+// For update and Delete , build-in function as it is .
+function middleware(req, res) {
+    if (req.body && typeof req.body === 'object' && '_method' in req.body) {
+        let method = req.body._method;
+        delete req.body._method;
+        return method;
+    }
+} // end of middleware function 
 
 
 /**************************************************** Server Listening  ********************************************/

@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title> Edit Books</title>
+    <link rel="stylesheet" href="../styles/base.css">
+    <link rel="stylesheet" href="../styles/modules.css">
+    <link rel="stylesheet" href="../styles/layout.css">
+
+</head>
+
+<body>
+    <header>
+        <%- include('../../templates/header') %> 
+    </header>
+    <main>
+        <form class="updateForm" action="/update/<%= gifts.id%>" method="post">
+            <label>
+                <!-- no need to show its up  -->
+                <input type="hidden" name="_method" value="put">
+                <input type="hidden" name="id" value="gifts.id">
+
+                <input  type="text" name="title" placeholder="Populated Title:" value="<%= gifts.title%>">
+                <input  type="text" name="type" placeholder="Populated Type:" value="<%= gifts.type%>">
+                <input  type="text" name="image" value="<%= gifts.image%>">
+                <input type="text" name="gifshelf" placeholder="Enter a GIFshelf Name:" value="<%= gifts.gifshelf%>">
+                <div class="submit">
+                    <input type="submit" value="Update GIF"></input>
+                </div>
+            </label>
+        </form>
+        </main>
+
+        <footer>
+            <%- include('../../templates/footer') %> 
+        </footer>
+</body>
+
+</html>

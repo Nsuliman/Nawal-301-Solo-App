@@ -22,6 +22,17 @@
             <p class="giftype">Type : <%-gift.type %></p>
             <p class="gifshelf"> GIF-Shelf : <%= gift.gifshelf%></p>
             <br>
+
+            <div class="update-delete">
+                <form action='/update' method="POST" class="formBook">
+                    <input type="hidden" name="id" value="<%= gift.id%>">
+                    <input type="hidden" name="image" value="<%= gift.image%>">
+                    <input type="hidden" name="title" value="<%= gift.title%>">
+                    <input type="hidden" name="type" value="<%= gift.type%>">
+                    <input type="hidden" name="gifshelf" value="<%= gift.gifshelf%>">
+                    <button class="updateButton" type="submit"> Update Details</button>
+                </form>
+                </div>
         </div>
         <% }); %>
     </main>
