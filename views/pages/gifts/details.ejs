@@ -32,6 +32,12 @@
                     <input type="hidden" name="gifshelf" value="<%= gift.gifshelf%>">
                     <button class="updateButton" type="submit"> Update Details</button>
                 </form>
+
+                <form action="/delete/<%= gift.id%>" method="post">
+                    <input type="hidden" name="_method" value="delete">
+                    <button type="submit" class="deletebutton">Delete GIF</button>
+                </form>
+
                 </div>
         </div>
         <% }); %>

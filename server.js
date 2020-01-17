@@ -149,6 +149,21 @@ server.put('/update/:gifts_id', (req, res) => {
         })
 });
 
+// Delete Book 
+server.delete('/delete/:gifts_id', (req,res) =>
+{
+    let SQL = `DELETE FROM gifts WHERE id=$1`
+    // // console.log('SQL : ', SQL);
+    let values = [req.params.gifts_id]
+    // // console.log('values : ', values);
+
+    client.query(SQL, values)
+        .then(() => {
+            res.redirect('/')
+        })
+});
+
+
 function Gift(data) {
 
     //The PIPE used if there's an empty data , to avoid error 
