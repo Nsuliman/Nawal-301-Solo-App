@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <title> New Search </title>
+  <!-- <link rel="stylesheet" href="styles/reset.css"> -->
+  <%- include('../../templates/head') %> 
+
+
+</head>
+
+<body>
+  <header>
+    <%- include('../../templates/header') %> 
+  </header>
+  <main>
+    <h2> New Search </h2>
+    <form action="/searches" method="post">
+      <input id="searchbox" name="search" placeholder='Enter a Keyword' style="color: rgb(2, 83, 79);">
+      <br><br>
+
+      <label class="container">Stickers
+        <input type="radio" name="searchtype" value="sticker">
+        <span class="checkmark"></span>
+      </label>
+
+      <label class="container">GIFs
+        <input type="radio" name="searchtype" value="gif">
+        <span class="checkmark"></span>
+      </label>
+
+      <button class="searchbutton" type="submit"> Search The Gifs/Stickers API</button><br><br>
+    </form>
+
+
+    
+  </main>
+
+  <footer>
+    <%- include('../../templates/footer') %> 
+</footer>
+
+</body>
+
+</html>

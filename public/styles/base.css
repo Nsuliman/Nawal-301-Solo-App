@@ -1,0 +1,150 @@
+/* Styling index ejs  */
+
+body {
+    background-color: rgb(2, 2, 36);
+    width: 500px;
+    margin: 0px auto;
+    border: 3px solid aqua;
+    }
+  
+    header {
+        background-image: url('../img/background-9120.jpg');
+        color: rgb(109, 5, 95);
+      padding: 10px;
+    }
+  
+    main  {
+        background-image: url('../img/background-9120.jpg');
+    }
+  
+    form {
+    display:flex;
+    flex-direction:column;
+    width: 300px;
+  }
+  
+  
+  label {
+    display:flex;
+    flex-direction:column;
+    margin-bottom: 1.5em;
+    font-size: x-large;
+  }
+  
+  button {
+    color: white;
+    padding: 20px;
+    width: 390px ;
+    margin-left: 0px;
+    margin-right: 55px;
+    margin-top: 30px;
+    text-align: center;
+    border-radius: 5px;
+    font-family: cursive;
+    font-size: x-large;
+    font-family: 'Roboto', sans-serif;
+  }
+  
+  input[type=text] {
+    width: 450px;
+    padding: 12px 20px;
+    margin-left: 80px ;
+    margin: 20px;
+    display: inline-block;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box;
+    text-align: center;
+    height: 50px;
+    color: rgb(2, 2, 36);
+    font-family: 'Playfair Display', serif;
+    font-weight: bolder;
+  }
+  
+  .addForm {
+    text-align: right;
+    width: 500px;
+    background-image: url('../img/background-9120.jpg');
+  }
+  
+  .addForm input::placeholder {
+    color: rgb(5, 78, 151);
+  }
+  
+  footer {
+    color: white;
+    text-align: center;
+    padding: 10px;
+    background-image: url('../img/109252540-abstract-blue-background-from-a-mixing-colors.jpg');
+  }
+  
+  .errorH1 {
+    color: white;
+    text-align: center;
+  }
+  
+  .errorLink {
+    color: red;
+    font-weight: bolder;
+    margin-left: 40%;
+  }
+  
+  .addForm input[type=submit]:hover {
+    color: aqua;
+    background-color: black;
+  }
+  
+  
+  .updateButton {
+    color: white;
+    background-color: rgb(2, 2, 36);
+    border: 2px solid white;
+    width: 160px;
+    padding: 10px;
+    font-size: large;
+    border-radius: 10px;
+    font-family: 'Roboto', sans-serif;
+  }
+  
+  .deletebutton {
+    color: white;
+    background-color: rgb(2, 2, 36);
+    border: 2px solid white;
+    width: 160px;
+    padding: 10px;
+    font-size: large;
+    border-radius: 10px;
+    font-family: 'Roboto', sans-serif;
+  }
+  
+  .deletebutton:hover {
+    color: aqua;
+    background-color: rgb(114, 4, 148);
+  }
+  .updateButton:hover {
+    color: aqua;
+    background-color: rgb(114, 4, 148);
+  }
+
+  .updateForm {
+    background-image: url('../img/background-9120.jpg');
+    text-align: right;
+    width: 500px;
+  }
+  
+  .updateForm input[type=submit]:hover {
+    color: aqua;
+    background-color: rgb(114, 4, 148);
+  }
+  .updateForm input::placeholder {
+    color: rgb(7, 94, 182);
+  }
+  
+  .update-delete {
+    display:flex;
+    flex-direction:row;
+    width: 300px;
+    justify-content: space-between;
+    margin-left: 10px;
+  }
+

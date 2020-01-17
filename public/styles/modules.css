@@ -1,0 +1,86 @@
+/* Styling index ejs  */
+
+main h2 {
+    /* background-color: rgb(236, 96, 229); */
+    background-image: url('../img/water-1330252__340.webp');
+    color: purple;
+    text-align: center;
+    padding: 15px;
+    margin: 0px auto;
+}
+
+  /******** Text box and radio button **********/
+
+::placeholder { /* Chrome, Firefox, Opera, Safari 10.1+ */
+    color: rgb(52, 241, 232);
+    opacity: 1; /* Firefox */
+  }
+
+  /* Text box input */
+#searchbox {
+    margin: 10px 50px;
+    padding: 20px;
+    width: 350px ;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-size: x-large;
+    border-radius: 10px;
+}
+
+  /******** show page **********/
+
+.gifdetails {
+    position: relative;
+    text-align: center;
+    background-color: rgb(212, 148, 209);
+    border: 3px solid rgb(3, 224, 206);
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    margin: 10px 30px;
+    border-radius: 5px;
+    font-style: oblique;
+    font-weight: bold;
+    padding: 20px;
+    height: 600px;
+  }
+
+.gifimage {
+
+    width: 300px;
+    height: 250px;
+    margin: 5px;
+    padding: 10px;
+    background-color: white;
+}
+
+
+.giftitle {
+  color: white;
+  text-shadow: 2px 2px black;
+  font-size: larger;
+}
+
+
+.selectbutton {
+  margin-left: 0px;
+  background-color: rgb(2, 2, 36);
+}
+
+.selectbutton:hover {
+    color: aqua;
+    background-color: rgb(114, 4, 148);
+}
+.searchbutton {
+  margin-left: 55px;
+  background-image: url('../img/water-1330252__340.webp');
+  color: purple;
+  font-weight: bolder;
+}
+
+.submit input {
+  background-color: rgb(2, 2, 36);
+  color: white;
+  margin-right: 25px;
+  padding: 10px;
+  width: 50%;
+  font-family: 'Playfair Display', serif;
+  font-size: large;
+}

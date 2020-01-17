@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Books</title>
+    <link rel="stylesheet" href="../styles/base.css">
+    <link rel="stylesheet" href="../styles/modules.css">
+    <link rel="stylesheet" href="../styles/layout.css">
+    <link href="https://fonts.googleapis.com/css?family=Roboto&display=swap" rel="stylesheet">
+</head>
+
+<body>
+    <header>
+        <%- include('../../templates/header') %>
+    </header>
+    <main>
+        <% gifts.forEach((gift)=> { %>
+        <div class="gifdetails">
+            <p class="detailp"> ** GIF Details ** </p><br>
+            <img class="gifimage" src=<%=gift.image %><br>
+            <p class="giftitle">Title : <%-gift.title%></p>
+            <p class="giftype">Type : <%-gift.type %></p>
+            <p class="gifshelf"> GIF-Shelf : <%= gift.gifshelf%></p>
+            <br>
+
+            <div class="update-delete">
+                <form action='/update' method="POST">
+                    <input type="hidden" name="id" value="<%= gift.id%>">
+                    <input type="hidden" name="image" value="<%= gift.image%>">
+                    <input type="hidden" name="title" value="<%= gift.title%>">
+                    <input type="hidden" name="type" value="<%= gift.type%>">
+                    <input type="hidden" name="gifshelf" value="<%= gift.gifshelf%>">
+                    <button class="updateButton" type="submit"> Update GIF info</button>
+                </form>
+
+                <form action="/delete/<%= gift.id%>" method="post">
+                    <input type="hidden" name="_method" value="delete">
+                    <button type="submit" class="deletebutton">Delete GIF</button>
+                </form>
+
+                </div>
+        </div>
+        <% }); %>
+    </main>
+
+    <footer>
+        <%- include('../../templates/footer') %>
+    </footer>
+</body>
+
+</html>
